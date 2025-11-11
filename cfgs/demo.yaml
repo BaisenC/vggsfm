@@ -41,10 +41,10 @@ avg_pose: True
 shared_camera: False
 
 save_to_disk: True
-SCENE_DIR: examples/kitchen
+SCENE_DIR: "examples/school_logo_example"
 
-resume_ckpt:  ckpt/vggsfm_v2_0_0.bin
-auto_download_ckpt: True
+resume_ckpt:  "ckpt/vggsfm_v2_0_0.bin"
+auto_download_ckpt: False
 
 query_method: "aliked"
 

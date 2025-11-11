@@ -192,7 +192,7 @@ def pycolmap_to_batch_matrix(
         # Extract and append extrinsics
         pyimg = reconstruction.images[i]
         pycam = reconstruction.cameras[pyimg.camera_id]
-        matrix = pyimg.cam_from_world.matrix()
+        matrix = pyimg.cam_from_world.matrix
         extrinsics.append(matrix)
 
         # Extract and append intrinsics

@@ -432,7 +432,7 @@ def refine_pose(
             if estanswer is not None:
                 cam_from_world = estanswer["cam_from_world"]
 
-        extri_mat = cam_from_world.matrix()
+        extri_mat = cam_from_world.matrix
         intri_mat = pycamera.calibration_matrix()
 
         refined_extrinsics.append(extri_mat)
@@ -599,7 +599,7 @@ def init_refine_pose(
             else:
                 print("This frame only has inliers:", inlier_mask.sum())
 
-        extri_mat = cam_from_world.matrix()
+        extri_mat = cam_from_world.matrix
         intri_mat = pycamera.calibration_matrix()
         refined_extrinsics.append(extri_mat)
         refined_intrinsics.append(intri_mat)
@@ -683,7 +683,7 @@ def triangulate_tracks(
     min_tri_angle=1.5,
     track_vis=None,
     track_score=None,
-    max_tri_points_num=819200,
+    max_tri_points_num=40960,
 ):
     """
     Triangulate Tracks. If necessary, process tracks in smaller chunks to avoid memory issues during triangulation.

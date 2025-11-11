@@ -14,8 +14,7 @@ export PYTHON_VERSION=3.10
 export PYTORCH_VERSION=2.1.0
 export CUDA_VERSION=12.1
 
-# Create a new conda environment and activate it
-conda create -n $ENV_NAME python=$PYTHON_VERSION
+# conda create -n $ENV_NAME python=$PYTHON_VERSION
 conda activate $ENV_NAME
 
 # Install PyTorch, torchvision, and PyTorch3D using conda
@@ -28,17 +27,17 @@ pip install hydra-core --upgrade
 pip install omegaconf opencv-python einops visdom tqdm scipy plotly scikit-learn imageio[ffmpeg] gradio trimesh huggingface_hub
 
 # Install LightGlue
-git clone https://github.com/jytime/LightGlue.git dependency/LightGlue
+git clone https://ghfast.top/https://ghfast.top/https://github.com/jytime/LightGlue.git dependency/LightGlue
 
 cd dependency/LightGlue/
 python -m pip install -e .  # editable mode
 cd ../../
-
+echo $LD_LIBRARY_PATH
 # Force numpy <2
 pip install numpy==1.26.3
 
 # Ensure the version of pycolmap is 3.10.0
-pip install pycolmap==3.10.0 
+pip install pycolmap==0.5.0
 pip install pyceres==2.3
 
 # (Optional) Install poselib 
