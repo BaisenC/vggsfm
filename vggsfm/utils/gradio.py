@@ -44,7 +44,7 @@ def visualize_by_gradio(glbfile):
         log_output = gr.Textbox(label="Log", lines=2, value=log_message)
 
     # Launch the Gradio interface
-    demo.launch(share=True)
+    demo.launch(server_name="0.0.0.0", server_port=8080)
 
 
 def vggsfm_predictions_to_glb(predictions) -> trimesh.Scene:
