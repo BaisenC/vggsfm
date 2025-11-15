@@ -226,11 +226,11 @@ class CameraPredictor(nn.Module):
         """
         if backbone == "dinov2s":
             return torch.hub.load(
-                "facebookresearch/dinov2", "dinov2_vits14_reg"
+                "/root/.cache/torch/hub/dinov2", "dinov2_vits14_reg", source="local"
             )
         elif backbone == "dinov2b":
             return torch.hub.load(
-                "facebookresearch/dinov2", "dinov2_vitb14_reg"
+                "/root/.cache/torch/hub/dinov2", "dinov2_vitb14_reg", source="local"
             )
         else:
             raise NotImplementedError(f"Backbone '{backbone}' not implemented")
